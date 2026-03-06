@@ -14,4 +14,7 @@ app.use('/api/users/', usersRoutes)
 app.use('/api/tasks/',authenticateToken, tasksRoutes)
 app.use('/api/login/', authRoutes)
 
+app.get('/',(req, res)=>{
+    res.send('!is Alive!');
+});
 export default app;
