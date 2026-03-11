@@ -18,5 +18,6 @@ router.route('/:id')
 router.get('/:id/tasks',authenticateToken,userController.getTasks)
 
 //ruta paginación
-router.get('/list/pagination', authenticateToken, userController.pagination);
+router.get('/list/pagination', userController.pagination);
+//router.get('/list/pagination', authenticateToken, userController.pagination);
 export default router
